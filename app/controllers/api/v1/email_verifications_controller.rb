@@ -12,7 +12,7 @@ class Api::V1::EmailVerificationsController < ApplicationController
     @email_verifications = []
 
     if verified_params["addresses"].length > 10 or verified_params["addresses"].length < 1
-      render json:{ message: "Validation Failed", status: :bad_input }
+      render json: { message: "Please send between 1 and 10 emails" }, status: :unprocessable_entity
       return
     end
 
