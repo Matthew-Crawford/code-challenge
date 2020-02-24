@@ -28,7 +28,12 @@ to accept an array of address, so now the proper format to POST to /email_verifi
  	
  }
 ```
-The endpoint is set to handle between 1 and 10 addresses, any more or less and it'll return an error.
+The endpoint is set to handle between 1 and 10 addresses, any more or less and it'll return an error. 
+
+This postman collection link https://www.getpostman.com/collections/de2c78051fbb0bf85bcc contains the POST
+endpoint for email verification and auth (see next section) pre-filled. It can be imported in postman by going to import -> import from link. 
+This collection has 2 endpoints, one demonstrating 10 verifications, the first 5 are returned as valid and the second 5 
+invalid. The second "Too many emails" POST has one too many emails and thus returns a "bad input" error.
 
 ### Task 3
 
