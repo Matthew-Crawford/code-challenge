@@ -1,0 +1,36 @@
+<% provide(:title, "verify") %>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<h2>Please enter an email address to verify </h2>
+
+<div>
+  <%= form_for(:address, url: verify_path, local: true) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<h2>Or upload a csv (max 100)</h2>
+<div>
+  <%= form_tag verify_bulk_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
+
+<div>
+  <% if @verification_map %>
+    <% @verification_map.each do | key, value | %>
+      <%= key%>:<%= value %>
+      <br />
+    <% end %>
+  <% end %>
+</div>
