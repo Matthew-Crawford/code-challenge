@@ -7,9 +7,7 @@ each task below.
 ### Task 1
 
 According to this document: https://help.returnpath.com/hc/en-us/articles/220560587-What-are-the-rules-for-email-address-syntax
-among other references online it seems that there are 4 verifiable chunks of an email.I split the verification functions 
-into two methods, each of which have several sub methods that check various aspects of the email address. The check_status
-method comes back as 'valid' or 'invalid' and stored as such.
+among other references online it seems that there are 4 verifiable chunks of an email: the recipient name, '@' symbol, domain name and top level domain. I split the verification functions into two methods, each of which have several sub methods that check various aspects of the email address. The check_status method comes back as 'valid' or 'invalid' and stored as such. I also implemented some rspec tests in the email_address_spec file to test these methods.
 
 ### Task 2
 
