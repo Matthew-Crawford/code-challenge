@@ -56,13 +56,9 @@ callback method to authenticate the user before any of the api code is run.
 
 ### Task 4
 
-Since I already had very basic authentication set up for the front end, I thought I might as well set up basic session
-authentication for the front end. So I implemented a very basic sign up and login form (they are very ugly I apologize).
-When you sign up or login you get sent to the MainController root page, in which you can submit an email address. The address will be
-saved and a beautiful (just kidding it's just as ugly) message will pop up from the top of the page declaring if the address
-is valid or invalid. You will only get to the MainController page if you have a session, and you will also only be able 
-submit an email if you have an active session. This is done by setting the session[:uuid] on login and checking the session[:uuid] 
-on POSTing to the session /create endpoint. 
+To access the email verification page while running rails server, go to localhost:3000. The root page is the verification page.
+However, since I already had very basic authentication set up for the front end, I thought I might as well set up basic session
+authentication for the front end. So I implemented a very basic sign up and login form (they are very ugly I apologize) and you will be redirected to the sign in form if you do not have a session. When you sign up or login you get sent to the MainController root page, in which you can submit an email address. The address will be saved and a beautiful (just kidding it's just as ugly) message will pop up from the top of the page declaring if the address is valid or invalid. You will only get to the MainController page if you have a session, and you will also only be able submit an email if you have an active session. This is done by setting the session[:uuid] on login and checking the session[:uuid] on POSTing to the session /create endpoint. 
 
 ### Bonus Task: Bulk CSV Upload
 
